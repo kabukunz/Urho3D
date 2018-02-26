@@ -61,6 +61,10 @@ public class Urho3D extends SDLActivity {
         // All shared shared libraries must always be loaded if available, so exclude it from return result and all list operations below
         int startIndex = libraryNames.indexOf("Urho3DPlayer");
 
+        // check for third-party libraries/runners different from Urho3D Player whose name we don't know,
+        // so taking the first element. This way, an empty library list is going to throw an exception anyway
+        if (startIndex==-1 && !libraryNames.isEmpty()) startIndex = 0;
+
         // Determine the intention
         Intent intent = getIntent();
         String pickedLibrary = intent.getStringExtra(SampleLauncher.PICKED_LIBRARY);

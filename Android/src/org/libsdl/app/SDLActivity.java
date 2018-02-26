@@ -157,6 +157,7 @@ public class SDLActivity extends Activity {
                     }
                 } catch(Exception e) {
                     errorMsgBrokenLib = e.getMessage();
+                    if (errorMsgBrokenLib == null)errorMsgBrokenLib="An Exception occurred while loading app";
                 }
             }
 
