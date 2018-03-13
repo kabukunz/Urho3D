@@ -391,6 +391,7 @@ if (URHO3D_CLANG_TOOLS)
             URHO3D_LUA
             URHO3D_NAVIGATION
             URHO3D_SPARK
+            URHO3D_TURBOBADGER
             URHO3D_NETWORK
             URHO3D_PHYSICS
             URHO3D_PROFILING
@@ -448,6 +449,7 @@ foreach (OPT
         URHO3D_URHO2D
         URHO3D_WEBP
         URHO3D_SPARK
+        URHO3D_TURBOBADGER
         URHO3D_WIN32_CONSOLE)
     if (${OPT})
         add_definitions (-D${OPT})

@@ -135,6 +135,10 @@ if (URHO3D_SPARK)
 	add_subdirectory (ThirdParty/Spark)
 endif ()
 
+if (URHO3D_TURBOBADGER)
+	add_subdirectory (ThirdParty/TurboBadger)
+endif ()
+
 # Urho3D game engine library
 add_subdirectory (Urho3D)
 

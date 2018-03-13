@@ -114,6 +114,7 @@ endif ()
 if (NOT URHO3D_SPARK)
     list (APPEND EXCLUDED_SOURCE_DIRS Spark)
 endif ()
+
 if (URHO3D_DATABASE)
     if (URHO3D_DATABASE_ODBC)
         list (APPEND EXCLUDED_SOURCE_DIRS Database/SQLite)
