@@ -6,8 +6,8 @@
 #ifndef TB_WIDGET_ANIMATION_H
 #define TB_WIDGET_ANIMATION_H
 
-#include "tb_widgets_listener.h"
-#include "animation/tb_animation.h"
+#include <Urho3D/ThirdParty/TurboBadger/tb_widgets_listener.h>
+#include <Urho3D/ThirdParty/TurboBadger/animation/tb_animation.h>
 
 namespace tb {
 

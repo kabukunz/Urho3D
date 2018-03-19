@@ -6,8 +6,8 @@
 #ifndef TB_ANIMATION_H
 #define TB_ANIMATION_H
 
-#include "tb_linklist.h"
-#include "tb_object.h"
+#include <Urho3D/ThirdParty/TurboBadger/tb_linklist.h>
+#include <Urho3D/ThirdParty/TurboBadger/tb_object.h>
 
 namespace tb {
 
