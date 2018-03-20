@@ -1,3 +1,7 @@
+# VSCode
+
+**/.vscode
+
 # Output directories
 /bin/*
 !/bin/**/
