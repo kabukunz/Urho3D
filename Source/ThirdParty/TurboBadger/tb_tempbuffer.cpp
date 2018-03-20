@@ -83,6 +83,7 @@ bool TBTempBuffer::AppendString(const char *str)
 	return false;
 }
 
+/// FIXME: substitute for Urho file accessor
 bool TBTempBuffer::AppendPath(const char *full_path_and_filename)
 {
 	const char *str_start = full_path_and_filename;
