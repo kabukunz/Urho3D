@@ -12,11 +12,15 @@
 #elif defined(_WIN32)
 #include <windows.h> // make gl.h compile
 #include <GL/gl.h>
-#elif defined(MACOSX)
+#elif defined(MACOSX) || defined(__MACOSX__)
 #include <OpenGL/gl.h>
 #elif defined(ANDROID) || defined(__ANDROID__)
 #include <GLES/gl.h>
+// TODO: TVOS
+#elif defined(IOS) || defined(__IOS__)
+#include <GLES/gl.h>
 #else
+// FIXME: not found on os X
 #include <GL/gl.h>
 #endif
 
