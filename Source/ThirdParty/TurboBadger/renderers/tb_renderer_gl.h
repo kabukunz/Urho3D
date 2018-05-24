@@ -6,6 +6,7 @@
 #ifndef TB_RENDERER_GL_H
 #define TB_RENDERER_GL_H
 
+// TODO: TVOS
 #ifdef TB_RENDERER_GLES_1
 #include <EGL/egl.h>
 #include <GLES/gl.h>
@@ -16,11 +17,11 @@
 #include <OpenGL/gl.h>
 #elif defined(ANDROID) || defined(__ANDROID__)
 #include <GLES/gl.h>
-// TODO: TVOS
 #elif defined(IOS) || defined(__IOS__)
 #include <GLES/gl.h>
 #else
-// FIXME: not found on os X
+// FIXME: can't get os x to fire
+// #include <OpenGL/gl.h>
 #include <GL/gl.h>
 #endif
 
