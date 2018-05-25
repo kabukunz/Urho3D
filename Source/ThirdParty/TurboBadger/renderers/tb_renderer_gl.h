@@ -21,8 +21,8 @@
 #include <GLES/gl.h>
 #else
 // FIXME: can't get os x to fire
-// #include <OpenGL/gl.h>
-#include <GL/gl.h>
+#include <OpenGL/gl.h>
+// #include <GL/gl.h>
 #endif
 
 #include "renderers/tb_renderer_batcher.h"
