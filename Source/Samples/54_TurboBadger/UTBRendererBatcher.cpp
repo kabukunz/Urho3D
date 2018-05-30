@@ -63,7 +63,7 @@ UTBBitmap::UTBBitmap(Context *_pContext, int _width, int _height)
     : context_( _pContext )
     , width_( _width ) 
     , height_( _height )
-    , texture_( NULL )
+    // , texture_( NULL )
 {
     texture_ = new Texture2D( context_ );
 
@@ -223,7 +223,7 @@ void UTBRendererBatcher::CreateKeyMap()
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_INSERT   , TB_KEY_INSERT    ) );
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_DELETE   , TB_KEY_DELETE    ) );
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_RETURN   , TB_KEY_ENTER     ) );
-    uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_ESC      , TB_KEY_ESC       ) );
+    uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_ESCAPE   , TB_KEY_ESC       ) );
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_F1       , TB_KEY_F1        ) );
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_F2       , TB_KEY_F2        ) );
     uKeytoTBkeyMap.Insert( Pair<int,int>( KEY_F3       , TB_KEY_F3        ) );
@@ -412,22 +412,22 @@ void UTBRendererBatcher::AddQuadInternal(const TBRect &dst_rect, const TBRect &s
 void UTBRendererBatcher::RegisterHandlers()
 {
     // timer
-    SubscribeToEvent(E_UPDATE, HANDLER(UTBRendererBatcher, HandleUpdate));
+    SubscribeToEvent(E_UPDATE,  URHO3D_HANDLER(UTBRendererBatcher, HandleUpdate));
 
     // screen resize and renderer
-    SubscribeToEvent(E_SCREENMODE, HANDLER(UTBRendererBatcher, HandleScreenMode));
-    SubscribeToEvent(E_BEGINFRAME, HANDLER(UTBRendererBatcher, HandleBeginFrame));
-    SubscribeToEvent(E_POSTUPDATE, HANDLER(UTBRendererBatcher, HandlePostUpdate));
-    SubscribeToEvent(E_POSTRENDERUPDATE, HANDLER(UTBRendererBatcher, HandlePostRenderUpdate));
+    SubscribeToEvent(E_SCREENMODE, URHO3D_HANDLER(UTBRendererBatcher, HandleScreenMode));
+    SubscribeToEvent(E_BEGINFRAME, URHO3D_HANDLER(UTBRendererBatcher, HandleBeginFrame));
+    SubscribeToEvent(E_POSTUPDATE, URHO3D_HANDLER(UTBRendererBatcher, HandlePostUpdate));
+    SubscribeToEvent(E_POSTRENDERUPDATE, URHO3D_HANDLER(UTBRendererBatcher, HandlePostRenderUpdate));
 
     // inputs
-    SubscribeToEvent(E_MOUSEBUTTONDOWN, HANDLER(UTBRendererBatcher, HandleMouseButtonDown));
-    SubscribeToEvent(E_MOUSEBUTTONUP, HANDLER(UTBRendererBatcher, HandleMouseButtonUp));
-    SubscribeToEvent(E_MOUSEMOVE, HANDLER(UTBRendererBatcher, HandleMouseMove));
-    SubscribeToEvent(E_MOUSEWHEEL, HANDLER(UTBRendererBatcher, HandleMouseWheel));
-    SubscribeToEvent(E_KEYDOWN, HANDLER(UTBRendererBatcher, HandleKeyDown));
-    SubscribeToEvent(E_KEYUP, HANDLER(UTBRendererBatcher, HandleKeyUp));
-    SubscribeToEvent(E_TEXTINPUT, HANDLER(UTBRendererBatcher, HandleTextInput));
+    SubscribeToEvent(E_MOUSEBUTTONDOWN, URHO3D_HANDLER(UTBRendererBatcher, HandleMouseButtonDown));
+    SubscribeToEvent(E_MOUSEBUTTONUP, URHO3D_HANDLER(UTBRendererBatcher, HandleMouseButtonUp));
+    SubscribeToEvent(E_MOUSEMOVE, URHO3D_HANDLER(UTBRendererBatcher, HandleMouseMove));
+    SubscribeToEvent(E_MOUSEWHEEL, URHO3D_HANDLER(UTBRendererBatcher, HandleMouseWheel));
+    SubscribeToEvent(E_KEYDOWN, URHO3D_HANDLER(UTBRendererBatcher, HandleKeyDown));
+    SubscribeToEvent(E_KEYUP, URHO3D_HANDLER(UTBRendererBatcher, HandleKeyUp));
+    SubscribeToEvent(E_TEXTINPUT, URHO3D_HANDLER(UTBRendererBatcher, HandleTextInput));
 }
 
 //=============================================================================
