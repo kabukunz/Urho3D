@@ -28,6 +28,9 @@
 #include "../Math/Ray.h"
 #include "../Math/Matrix2.h"
 
+// Some headers could re-define M_PI, ensure that it's undefined.
+#undef M_PI
+
 namespace Urho3D
 {
 
@@ -1431,7 +1434,7 @@ static void RegisterColor(asIScriptEngine* engine)
     engine->RegisterGlobalProperty("const Color CYAN", (void*)&Color::CYAN);
     engine->RegisterGlobalProperty("const Color MAGENTA", (void*)&Color::MAGENTA);
     engine->RegisterGlobalProperty("const Color YELLOW", (void*)&Color::YELLOW);
-    engine->RegisterGlobalProperty("const Color TRANSPARENT", (void*)&Color::TRANSPARENT);
+    engine->RegisterGlobalProperty("const Color TRANSPARENT_BLACK", (void*)&Color::TRANSPARENT_BLACK);
 }
 
 void RegisterMathAPI(asIScriptEngine* engine)
