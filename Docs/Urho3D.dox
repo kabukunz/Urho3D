@@ -118,6 +118,7 @@ Urho3D development, contributions and bugfixes by:
 - Justin Miller
 - Jonne Nauha
 - Huy Nguyen
+- Neal Nicdao
 - Paul Noome
 - David Palacios
 - Alex Parlett
@@ -236,7 +237,7 @@ Urho3D uses the following third-party libraries:
 - Open Asset Import Library 4.1.0 (http://assimp.sourceforge.net)
 - pugixml 1.7 (http://pugixml.org)
 - rapidjson 1.1.0 (https://github.com/miloyip/rapidjson)
-- Recast/Detour (https://github.com/memononen/recastnavigation)
+- Recast/Detour (https://github.com/recastnavigation/recastnavigation)
 - SDL 2.0.7 (https://www.libsdl.org)
 - SQLite 3.20.1 (https://www.sqlite.org)
 - StanHull (https://codesuppository.blogspot.com/2006/03/john-ratcliffs-code-suppository-blog.html)
@@ -1380,6 +1381,7 @@ From 1.7 to master:
 - StringHash::Calculate() method is now case-sensitive.
 - Build system - integrate with Gradle build system and migration to use Kotlin for Android platform.
 - Build system - introduce a new Emscripten-specific build option "EMSCRIPTEN_AUTO_SHELL" (default to TRUE), which cause the build system to automatically add an HTML shell-file if one is not explicitly given. Also set the default for "EMSCRIPTEN_WASM" build option to TRUE in order to align with the upstream EMCC compiler changes.
+- Build system - the 'WIN32' build option for 'cmake_generic.sh' is renamed to 'MINGW' to be consistent with 'cmake_generic.bat'.
 
 */
 
